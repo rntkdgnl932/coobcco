@@ -34,7 +34,15 @@ def go_test(cla):
         print("dungeon_clear_1", imgs_)
     else:
         print("dungeon_clear_1 없")
-    go_bag(cla, "test")
+
+    full_path = "c:\\coobcco\\imgs\\stop\\stop_view.PNG"
+    img_array = np.fromfile(full_path, np.uint8)
+    img = cv2.imdecode(img_array, cv2.IMREAD_COLOR)
+    imgs_ = imgs_set(60, 500, 400, 900, cla, img)
+    if imgs_ is not None and imgs_ != False:
+        print("stop_view", imgs_)
+    else:
+        print("stop_view 없")
 
     # bom_wind = text_check_get(670, 397, 715, 415, cla)
     # print("bom_wind", bom_wind)
