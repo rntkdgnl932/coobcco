@@ -198,11 +198,17 @@ def line_monitor():
     from function import imgs_set
     import time
     from datetime import datetime, timedelta, date
+    from stop_18 import is_stop
     try:
         isLoop = False
 
         # v_.global_howcla
         while isLoop is False:
+
+            is_stop("one")
+            time.sleep(0.1)
+            is_stop("two")
+
             nowTime = datetime.today().strftime("%Y/%m/%d %H:%M:%S")
             print(nowTime)
             full_path = "c:\\coobcco\\imgs\\clean\\unreal_error_1.png"
