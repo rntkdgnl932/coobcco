@@ -6,7 +6,7 @@ sys.path.append('C:/coobcco/mymodule')
 
 
 def go_test(cla):
-    from action import go_mynumber_
+    from action import go_mynumber_, go_bag
     from chango import go_chango, chango_, auction
     from function import imgs_set, click_pos_2, text_check_get, text_check_get_2, text_check_get_3, text_check_get_4, imgs_set_, click_pos_reg
     from event_get import game_event_get_ready, game_event_get, go_item_open, go_ticket_open
@@ -34,6 +34,7 @@ def go_test(cla):
         print("dungeon_clear_1", imgs_)
     else:
         print("dungeon_clear_1 없")
+    go_bag(cla, "test")
 
     # bom_wind = text_check_get(670, 397, 715, 415, cla)
     # print("bom_wind", bom_wind)
